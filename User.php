@@ -23,38 +23,3 @@ abstract class User
     abstract function getRole();
 }
 
-class Mahasiswa extends User {
-
-    function __construct($nama)
-    {
-        parent::__construct($nama);
-        $this->role = "mahasiswa";
-    }
-
-    function setRole($role){
-        $this->role = $role;
-    }
-
-    function getRole()
-    {
-        echo $this->role;
-    }
-}
-
-$mahasiswa = new Mahasiswa("budi");
-
-
-echo $mahasiswa->getRole();
-echo "\n";
-
-$mahasiswa->setRole("staf");
-
-echo $mahasiswa->getRole();
-echo "\n";
- 
-$mahasiswa->role = "admin";
-
-echo $mahasiswa->getRole();
-
-
-
