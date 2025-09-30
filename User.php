@@ -1,25 +1,18 @@
 <?php
+abstract class User {
 
-abstract class User
-{
     protected $username;
-    public $role;
+    protected $role; 
 
-    public function __construct($username)
+    function __construct($username)
     {
         $this->username = $username;
     }
 
-    function editUsername($username)
-    {
-        $this->username = $username;
-    }
-
-    function getUsername()
-    {
+    function getUsernama(){
         return $this->username;
     }
 
     abstract function getRole();
-}
 
+}

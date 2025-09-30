@@ -1,5 +1,7 @@
-<?php 
+<?php
 
 interface Notifikasi {
-    public function kirimPesan($pesan);
+public function kirimNotifikasi($pesan);
+
 }
+

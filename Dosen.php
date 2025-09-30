@@ -1,21 +1,21 @@
 <?php
+
 require_once "User.php";
-require_once "Notifikasi.php";
+require_once "notifikasi.php";
 
 class Dosen extends User implements Notifikasi{
 
-    public function __construct($nama)
+    function __construct($nama)
     {
         parent::__construct($nama);
     }
 
-    public function getRole()
-    {
+    function getRole(){
         return "Dosen";
     }
-
-    function kirimPesan($pesan)
+    function kirimNotifikasi($pesan)
     {
         echo $pesan;
     }
+
 }

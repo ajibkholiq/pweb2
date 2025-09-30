@@ -1,14 +1,20 @@
-<?php
+<?php 
 
-require_once "Mahasiswa.php";
 require_once "Dosen.php";
+require_once "mahasiswa.php";
 
-$mahasiswa = new Mahasiswa("budi wijaya");
-$dosen = new Dosen("ujang");
+$mahasiswa1 = new Mahasiswa("dadang");
+$dosen = new Dosen("ahmad");
 
-echo $dosen->getUsername();
+echo $mahasiswa1->getRole();
 echo $dosen->getRole();
 
-echo $mahasiswa->getUsername();
-echo $mahasiswa->getRole();
+function infoUser(User $user){
+    echo "\nnama :".$user->getUsernama()."\nperan : ".$user->getRole();
+}
+
+infoUser($mahasiswa1);
+infoUser($dosen);
+
+$dosen->kirimNotifikasi("\nabsen telah dibuka!");
 
