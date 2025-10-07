@@ -16,5 +16,4 @@ function infoUser(User $user){
 infoUser($mahasiswa1);
 infoUser($dosen);
 
-$dosen->kirimNotifikasi("\nabsen telah dibuka!");
 
